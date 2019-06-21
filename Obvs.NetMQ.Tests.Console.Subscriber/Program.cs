@@ -22,8 +22,7 @@ namespace Obvs.NetMQ.Tests.Console.Subscriber
 
 			IDisposable sub;
 			{
-				var source = new MessageSource<IMessage>(endPoint,
-					new IMessageDeserializer<IMessage>[]
+				var source = new MessageSource<IMessage>(endPoint, new IMessageDeserializer<IMessage>[]
 					{
 						new ProtoBufMessageDeserializer<Message1AndItIs32CharactersLongForSureDefinitionForSure>(),
 					},
